@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "surface-tint": "#1b6d24",
+              "surface-variant": "#e0e4da",
+              "tertiary": "#923357",
+              "on-primary-fixed-variant": "#005312",
+              "surface-bright": "#f7fbf0",
+              "on-secondary-container": "#4c6a48",
+              "inverse-on-surface": "#eef2e8",
+              "primary-fixed": "#a3f69c",
+              "inverse-surface": "#2d322b",
+              "on-tertiary-fixed": "#3f001c",
+              "tertiary-fixed": "#ffd9e2",
+              "secondary-fixed": "#c9ecc1",
+              "surface-dim": "#d7dbd2",
+              "on-secondary-fixed": "#052106",
+              "on-primary-fixed": "#002204",
+              "error": "#ba1a1a",
+              "on-surface-variant": "#40493d",
+              "secondary-container": "#c6e9be",
+              "primary": "#0d631b",
+              "primary-container": "#2e7d32",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e0e4da",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#ffb1c7",
+              "primary-fixed-dim": "#88d982",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#bfcaba",
+              "error-container": "#ffdad6",
+              "on-background": "#181d17",
+              "surface-container-high": "#e5eadf",
+              "surface": "#f7fbf0",
+              "on-error-container": "#93000a",
+              "on-primary-container": "#cbffc2",
+              "outline": "#707a6c",
+              "inverse-primary": "#88d982",
+              "on-tertiary-container": "#ffedf0",
+              "on-secondary-fixed-variant": "#304e2e",
+              "secondary-fixed-dim": "#add0a6",
+              "on-tertiary-fixed-variant": "#7f2448",
+              "tertiary-container": "#b14b6f",
+              "on-surface": "#181d17",
+              "secondary": "#476644",
+              "on-tertiary": "#ffffff",
+              "background": "#f7fbf0",
+              "surface-container": "#ebefe5",
+              "surface-container-low": "#f1f5eb"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-header {
+        backdrop-filter: blur(12px);
+      }
+      .signature-gradient {
+        background: linear-gradient(135deg, #0d631b 0%, #2e7d32 100%);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-[#f7fbf0]/80 dark:bg-[#181d17]/80 backdrop-blur-xl transition-colors">
+<div class="flex items-center justify-between px-6 h-16">
+<div class="flex items-center gap-4">
+<button class="hover:bg-[#e0e4da] dark:hover:bg-[#2e352b] transition-colors active:scale-95 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined text-[#0d631b] dark:text-[#4ade80]">arrow_back</span>
+</button>
+<h1 class="font-['Manrope'] font-semibold text-lg tracking-tight text-[#0d631b] dark:text-[#4ade80]">Add Listing</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-['Manrope'] font-bold text-[#0d631b]">Step 2/2</span>
+</div>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-8 space-y-12">
+<!-- Progress Indicator -->
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm font-semibold text-primary">
+<span>Location &amp; Media</span>
+<span>100%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full signature-gradient w-full"></div>
+</div>
+</div>
+<!-- Section 1: Photos -->
+<section class="space-y-6">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline text-2xl font-bold tracking-tight text-on-background">Visual Gallery</h2>
+<span class="text-sm font-medium text-outline">Up to 10 photos</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="aspect-square rounded-2xl bg-surface-container-highest border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center gap-2 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">add_a_photo</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Add Photo</span>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist living room with large windows, light oak floors, and contemporary furniture in soft neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEKJnSKixR8VK-lp3l-c5P5t71PjJ14NRk9uJCDvTmR9XG0lY2g9uMX1Zd-xjNj3WR3Mu3GHPB4_ZcVEHoHIrZEdF-zZdPleYeHEIYIRCPCrjJNF-dZPRlv-OKTaoJUcs2SP4b766fxTid2bDedZ_i6IRh3k-l0idIMhSmUGzGMwTOZdl_JyX0MGEpXpqDDDf_91SB7Jl8PocLdrgw4tlE4Ccz4mJav9H0fpQ2eMfuOzyZPAclIwEsPfwmwGUWAKcJmSyNkUr6Qbc"/>
+<button class="absolute top-2 right-2 bg-on-background/40 backdrop-blur-md p-1.5 rounded-full text-white hover:bg-error transition-colors">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden relative group hidden md:block">
+<img class="w-full h-full object-cover" data-alt="Close-up of high-end kitchen marble countertop with designer faucet and warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnVCwFBMwmSGhYIvdNMAJAkXVnWus6vf-9vavMUW0aJmJC2vWcDqybCpDvPxANi4uPCaNf9GbFwpIvtsHGlIch3hzqoulNGO0ABaI30cdkd6UbSYxBXTQPdVpOgSlgpIVMY5naWkDDYXUHDhsBTkE42ATBxcDNtZiw96G3dSj6ePx-0WGqiO1t0uZEl0Mq_saUHspNBRn59iRDaJg2Bzka9IIbSdtwjilse1VpuuZucpJqL-mASzxKc01KBMnukeSoMoIWX95-BSk"/>
+<button class="absolute top-2 right-2 bg-on-background/40 backdrop-blur-md p-1.5 rounded-full text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 2: Location -->
+<section class="space-y-8 bg-surface-container-low p-8 rounded-[2rem]">
+<h2 class="font-headline text-2xl font-bold tracking-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                Location Details
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<!-- Division -->
+<!-- District -->
+<!-- Thana -->
+<div class="space-y-2 md:col-span-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Short Address</label>
+<input class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary rounded-xl py-3 px-4 font-medium placeholder:text-outline/50" placeholder="e.g., Green Valley, North Cascades" type="text"/>
+</div>
+<!-- Road/House -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Road / House No.</label>
+<input class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary rounded-xl py-3 px-4 font-medium" placeholder="e.g. Road 12, House 45" type="text"/>
+</div>
+<!-- Contact -->
+<div class="space-y-2 md:col-span-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Contact Number</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-primary">+880</span>
+<input class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary rounded-xl py-3 pl-16 pr-4 font-medium" placeholder="1XXX XXXXXX" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="w-full h-48 rounded-2xl overflow-hidden relative group cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Stylized map showing urban city grid with pin indicator in soft green and gray tones" data-location="Dhaka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOoJsm67834WosOD3QGDpylyySCJ-7gGc6RPsA83Se7HraCGkuU232e-ta_0y_MqgxZWrsLSJCA5vCvClTXNXYTnfg4OWcBJ6FzLO24MqwB7Ykx0Ugj3VImD5mHf6DWYwde5_fIKLwl-26V4R-PjIC2mYLfax1WE8zR-SxJabVCthkTDhc4y6-Pr6BOfPgaAfziHPJAK9Pt14SWgg_pqQEomznBp0ORaPDLRD-kO2tXnX8ZcKMno2KJfTBs4AcCYoErTiR9g6hIlE"/>
+</div>
+</section>
+<!-- Section 3: Amenities -->
+<section class="space-y-6">
+<h2 class="font-headline text-2xl font-bold tracking-tight">Premium Amenities</h2>
+<div class="flex flex-wrap gap-3">
+<!-- Gas -->
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-semibold transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+<span>Gas</span>
+</button>
+<!-- Water -->
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-semibold transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+<span>Water</span>
+</button>
+<!-- Electricity -->
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-semibold transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Electricity</span>
+</button>
+<!-- Lift -->
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold transition-all">
+<span class="material-symbols-outlined text-[20px]">elevator</span>
+<span>Lift</span>
+</button>
+<!-- Parking -->
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold transition-all">
+<span class="material-symbols-outlined text-[20px]">garage</span>
+<span>Garage</span>
+</button>
+<!-- Security -->
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold transition-all">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<span>Security</span>
+</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-semibold transition-all">
+<span class="material-symbols-outlined text-[20px]">chair</span>
+<span>With Furniture</span>
+</button>
+<!-- Generator -->
+<!-- Gym -->
+</div>
+</section>
+</main>
+<!-- Footer Navigation (Back/Next) -->
+<footer class="fixed bottom-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl">
+<div class="max-w-3xl mx-auto px-6 h-24 flex items-center justify-between gap-6">
+<button class="flex-1 py-4 px-6 rounded-2xl bg-surface-container-highest text-primary font-bold hover:bg-surface-dim transition-all active:scale-95">
+                Back
+            </button>
+<button class="flex-[2] py-4 px-6 rounded-2xl signature-gradient text-on-primary font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-95 flex items-center justify-center gap-2">
+                Complete Listing
+                <span class="material-symbols-outlined">check_circle</span>
+</button>
+</div>
+</footer>
+<!-- BottomNavBar (Suppressed due to Task-Focus/Transactional rule) -->
+</body></html>

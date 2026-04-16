@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Listing - Step 1 | Evergreen Realty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#923357",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#add0a6",
+                        "secondary": "#476644",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#002204",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e5eadf",
+                        "surface": "#f7fbf0",
+                        "surface-variant": "#e0e4da",
+                        "on-background": "#181d17",
+                        "on-secondary-fixed": "#052106",
+                        "on-primary-container": "#cbffc2",
+                        "inverse-on-surface": "#eef2e8",
+                        "outline-variant": "#bfcaba",
+                        "on-surface-variant": "#40493d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffedf0",
+                        "inverse-primary": "#88d982",
+                        "surface-dim": "#d7dbd2",
+                        "surface-container": "#ebefe5",
+                        "secondary-fixed": "#c9ecc1",
+                        "on-tertiary-fixed-variant": "#7f2448",
+                        "surface-tint": "#1b6d24",
+                        "on-secondary-fixed-variant": "#304e2e",
+                        "on-secondary-container": "#4c6a48",
+                        "primary-container": "#2e7d32",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#88d982",
+                        "primary": "#0d631b",
+                        "inverse-surface": "#2d322b",
+                        "tertiary-container": "#b14b6f",
+                        "background": "#f7fbf0",
+                        "surface-bright": "#f7fbf0",
+                        "on-surface": "#181d17",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffd9e2",
+                        "tertiary-fixed-dim": "#ffb1c7",
+                        "on-tertiary-fixed": "#3f001c",
+                        "primary-fixed": "#a3f69c",
+                        "on-primary-fixed-variant": "#005312",
+                        "outline": "#707a6c",
+                        "secondary-container": "#c6e9be",
+                        "surface-container-low": "#f1f5eb",
+                        "surface-container-highest": "#e0e4da",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7fbf0]/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(24,29,23,0.06)] flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#0d631b] hover:bg-[#e0e4da] p-2 rounded-full transition-colors active:scale-95 duration-200" data-icon="close">close</button>
+<h1 class="font-['Manrope'] font-semibold text-xl tracking-tight text-[#0d631b]">Add Listing</h1>
+</div>
+<button class="font-['Manrope'] font-bold text-[#0d631b] hover:bg-[#e0e4da] px-4 py-2 rounded-xl transition-colors active:scale-95 duration-200">Save Draft</button>
+</nav>
+<main class="pt-24 pb-32 px-4 max-w-3xl mx-auto space-y-10">
+<!-- Progress Stepper -->
+<div class="flex items-center justify-between px-2 mb-8">
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg">
+<span class="font-bold">1</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Category</span>
+</div>
+<div class="flex-1 h-1 mx-4 bg-surface-container-highest rounded-full relative overflow-hidden">
+<div class="absolute inset-0 bg-primary w-1/4 rounded-full"></div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="font-bold">2</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline">Photos</span>
+</div>
+<div class="flex-1 h-1 mx-4 bg-surface-container-highest rounded-full"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="font-bold">3</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline">Publish</span>
+</div>
+</div>
+<!-- Section 1: Category Selection -->
+<section class="space-y-6">
+<div class="space-y-1">
+<h2 class="font-headline font-bold text-2xl text-on-surface">Select Category</h2>
+<p class="text-on-surface-variant text-sm">Choose the type of listing you want to create.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<!-- Family Home -->
+<button class="group flex flex-col items-start p-5 bg-surface-container-lowest border-2 border-primary rounded-2xl text-left transition-all active:scale-95">
+<div class="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="font-headline font-bold text-on-surface leading-tight">Family Home</span>
+</button>
+<!-- Bachelor -->
+<button class="group flex flex-col items-start p-5 bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant/30 rounded-2xl text-left transition-all active:scale-95">
+<div class="w-12 h-12 bg-surface-container-highest rounded-xl flex items-center justify-center mb-4 text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="font-headline font-bold text-on-surface leading-tight">Bachelor</span>
+</button>
+<!-- Sublet -->
+<button class="group flex flex-col items-start p-5 bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant/30 rounded-2xl text-left transition-all active:scale-95">
+<div class="w-12 h-12 bg-surface-container-highest rounded-xl flex items-center justify-center mb-4 text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary">
+<span class="material-symbols-outlined">bedroom_parent</span>
+</div>
+<span class="font-headline font-bold text-on-surface leading-tight">Sublet</span>
+</button>
+<!-- Hostel/Mess -->
+<button class="group flex flex-col items-start p-5 bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant/30 rounded-2xl text-left transition-all active:scale-95">
+<div class="w-12 h-12 bg-surface-container-highest rounded-xl flex items-center justify-center mb-4 text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="font-headline font-bold text-on-surface leading-tight">Hostel/Mess</span>
+</button>
+<!-- Office Space -->
+<button class="group flex flex-col items-start p-5 bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant/30 rounded-2xl text-left transition-all active:scale-95">
+<div class="w-12 h-12 bg-surface-container-highest rounded-xl flex items-center justify-center mb-4 text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<span class="font-headline font-bold text-on-surface leading-tight">Office Space</span>
+</button>
+<!-- Shop -->
+<button class="group flex flex-col items-start p-5 bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant/30 rounded-2xl text-left transition-all active:scale-95">
+<div class="w-12 h-12 bg-surface-container-highest rounded-xl flex items-center justify-center mb-4 text-on-surface-variant group-hover:bg-primary-container/10 group-hover:text-primary">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<span class="font-headline font-bold text-on-surface leading-tight">Shop</span>
+</button>
+</div>
+</section>
+<!-- Section 2: Property Details -->
+<section class="space-y-8 bg-surface-container-low p-6 rounded-3xl">
+<div class="space-y-6">
+<!-- Property Type Chips -->
+<div class="space-y-4">
+<label class="font-headline font-bold text-lg text-on-surface">Property Type</label>
+<div class="flex flex-wrap gap-3"><button class="px-5 py-2.5 bg-primary-container text-white rounded-full font-medium text-sm transition-all shadow-md shadow-primary/20">Apartment</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">House</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Office Space</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Shop</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Warehouse</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Factory</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Hostel</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Hotel</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Building</button></div>
+</div>
+<!-- Occupancy Chips -->
+<div class="space-y-4">
+<label class="font-headline font-bold text-lg text-on-surface">Allowed For</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2.5 bg-primary-container text-white rounded-full font-medium text-sm shadow-md shadow-primary/20">Family</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Male</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">Female</button>
+<button class="px-5 py-2.5 bg-surface-container-highest text-on-surface-variant rounded-full font-medium text-sm hover:bg-surface-variant transition-all">No Restrictions</button>
+</div>
+</div>
+<!-- Counters Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+<!-- Rooms -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">bed</span>
+<span class="font-bold">Total Rooms</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">-</button>
+<span class="font-bold text-lg w-4 text-center">3</span>
+<button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">+</button>
+</div>
+</div>
+<!-- Bathrooms -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shower</span>
+<span class="font-bold">Total Bathrooms</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">-</button>
+<span class="font-bold text-lg w-4 text-center">2</span>
+<button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">+</button>
+</div>
+</div>
+<!-- Kitchen -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">skillet</span>
+<span class="font-bold">Total Kitchen</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">-</button>
+<span class="font-bold text-lg w-4 text-center">1</span>
+<button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">+</button>
+</div>
+</div>
+<!-- Balcony -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">balcony</span>
+<span class="font-bold">Balcony</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">-</button>
+<span class="font-bold text-lg w-4 text-center">2</span>
+<button class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">+</button>
+</div>
+</div><div class="col-span-full grid grid-cols-2 gap-4 mt-2 px-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-outline transition-all checked:bg-primary checked:border-primary" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white opacity-0 peer-checked:opacity-100 left-0.5 text-sm pointer-events-none">check</span>
+</div>
+<span class="font-bold text-on-surface group-hover:text-primary transition-colors">Dining Room</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-outline transition-all checked:bg-primary checked:border-primary" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white opacity-0 peer-checked:opacity-100 left-0.5 text-sm pointer-events-none">check</span>
+</div>
+<span class="font-bold text-on-surface group-hover:text-primary transition-colors">Drawing Room</span>
+</label>
+</div>
+</div>
+<!-- Form Inputs -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-2">Floor Level</label>
+<select class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary font-semibold text-on-surface">
+<option>3rd Floor</option>
+<option>4th Floor</option>
+<option>5th Floor</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-2">Room Size (sqft)</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary font-semibold placeholder:text-outline-variant/60" placeholder="e.g. 1200" type="number"/>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between ml-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Rent Amount (BDT)</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<div class="relative flex items-center">
+<input class="peer h-4 w-4 cursor-pointer appearance-none rounded border border-outline transition-all checked:bg-primary checked:border-primary" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white opacity-0 peer-checked:opacity-100 left-0 text-[12px] pointer-events-none">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Negotiable</span>
+</label>
+</div>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary font-semibold placeholder:text-outline-variant/60" placeholder="e.g. 25000" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-2">Rent Period</label>
+<select class="w-full bg-surface-container-highest border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary font-semibold text-on-surface">
+<option>Monthly</option>
+<option>Quarterly</option>
+<option>Yearly</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Action -->
+<div class="pt-6 pb-12">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold text-lg py-5 rounded-2xl shadow-xl shadow-primary/20 flex items-center justify-center gap-3 transition-transform active:scale-95">
+                Next Step: Add Photos
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#f7fbf0]/80 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-8px_24px_rgba(24,29,23,0.04)] z-50">
+<button class="flex flex-col items-center justify-center text-[#44493f] px-5 py-2 hover:text-[#0d631b] transition-transform active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#2e7d32] text-white rounded-full px-5 py-2 transition-transform active:scale-90 duration-300 shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined" data-icon="domain" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Listings</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44493f] px-5 py-2 hover:text-[#0d631b] transition-transform active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Messages</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#44493f] px-5 py-2 hover:text-[#0d631b] transition-transform active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Profile</span>
+</button>
+</nav>
+</body></html>
